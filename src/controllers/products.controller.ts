@@ -9,6 +9,13 @@ const addProduct: RequestHandler = async (req, res) => {
   res.status(status).json(data);
 };
 
+const getAll: RequestHandler = async (_req, res) => {
+  const { status, data } = await productsService.getAllProducts();
+
+  res.status(status).json(data);
+};
+
 export default {
   addProduct,
+  getAll,
 };
