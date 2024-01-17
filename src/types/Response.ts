@@ -1,12 +1,9 @@
-import { ProductSequelizeModel } from '../database/models/product.model';
-import { Product } from './Product';
-
-export type ResponseType = {
+export type ResponseType<T> = {
   status: number,
-  data: Product,
+  data: T,
 };
 
-export type ResponseArrayType = {
+export type ResponseArrayType<T> = {
   status: number,
-  data: ProductSequelizeModel[],
+  data: T[],
 };
