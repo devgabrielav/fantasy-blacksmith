@@ -3,7 +3,7 @@ import { Product } from './Product';
 export type Order = {
   id: number;
   userId: number;
-  productIds?: Product[];
+  productIds?: number[] | Product[];
 };
 
 export type OrderIds = {
@@ -12,10 +12,16 @@ export type OrderIds = {
   productIds?: number[],
 };
 
-export type OrderSequelizeReturn = {
+export type OrderSequelizeReturn<T> = {
   dataValues: {
     id: number;
     userId: number;
-    productIds?: Product[];
+    productIds?: T[] | number[] | Product[];
   }
+};
+
+export type NewOrder = {
+  id?: number,
+  userId: number,
+  productIds: number[],
 };

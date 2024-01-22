@@ -4,9 +4,9 @@ const validUsername = 'Hera';
 const wrongPassword = 'wrongPa33word';
 const wrongUsername = 'Wrong';
 
-const loginWithNoUsername = { password: validPassword };
+const loginWithNoUsername = { username: '', password: validPassword };
 
-const loginWithNoPassword = { username: validUsername };
+const loginWithNoPassword = { username: validUsername, password: '' };
 
 const loginWithInvalidUsername = { username: wrongUsername, password: validPassword };
 
@@ -22,6 +22,8 @@ const existingUser = {
   password: hashedPassword,
 };
 
+const mockHashReturn = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIZXJhIiwiaWF0IjoxNzA1ODc1ODgyfQ.kEy0iUd66jtfeqfVszPffmnOLTW6_BcaPjMW69YXx9E';
+
 export default {
   loginWithNoUsername,
   loginWithNoPassword,
@@ -29,5 +31,6 @@ export default {
   loginWithInvalidPassword,
   correctLogin,
   existingUser,
-  validPassword
+  validPassword,
+  mockHashReturn
 };

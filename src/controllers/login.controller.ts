@@ -1,7 +1,7 @@
-import { RequestHandler } from 'express';
+import { Request, Response } from 'express';
 import loginService from '../services/login.service';
 
-const login: RequestHandler = async (req, res) => {
+const login = async (req: Request, res: Response) => {
   const { username, password } = req.body;
 
   const { status, data } = await loginService.verifyLogin({ username, password });
