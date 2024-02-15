@@ -1,7 +1,7 @@
 # Project Fantasy Blacksmith
 
 # Context
-This is a CRUD project made with layered architecture, simulating a blacksmith store with: orders and products.
+This is a Backend, CRUD project made with layered architecture, simulating a blacksmith store with: orders and products.
 
 Along with the login route with validations, it's possible to: 
   - GET orders and products;
